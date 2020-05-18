@@ -18,7 +18,7 @@ To view more github user's details, click on the card
 * React - For Layout    
 
 ## Link
-Access app via https://dinakajoy.github.io/news-app/
+Access app via https://github-profile-app-by-joy.netlify.app/
 
 ## Author
 [Odinaka Joy](https://odinakajoy.com)
