@@ -21,4 +21,4 @@ To view more github user's details, click on the card
 Access app via https://github-profile-app-by-joy.netlify.app/
 
 ## Author
-[Odinaka Joy](https://odinakajoy.com)
+[Odinaka Joy](https://dinakajoy.com)
