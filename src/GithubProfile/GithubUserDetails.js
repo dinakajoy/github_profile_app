@@ -68,14 +68,15 @@ class GithubUserDetails extends React.Component {
           <div className="repo-details">
             {this.state.repos.map(function(repo, index) {
               return <div className="repo_wrapper">
-                <h4><i class="fa fa-code"></i>{'  '}{repo.name}</h4>
+                {repo.homepage !== '' && <a href={repo.homepage}><h4><i class="fa fa-code"></i>{'  '}{repo.name}</h4></a>}
+                {repo.homepage === '' && <h4><i class="fa fa-code"></i>{'  '}{repo.name}</h4>}
                 <p>{repo.description}</p>
                 <br />
                 <div class="repo-group">
-                  <span><i class="	fa fa-circle"></i>{repo.language}</span>
-                  <span><i class="fa fa-code-fork"></i>{repo.forks_count}</span>
-                  <span><i class="fa fa-star"></i>{repo.stargazers_count}</span>
-                  <span><i class="fa fa-pie-chart"></i>{repo.size}kb</span>
+                  {repo.language !== '' &&<span><i class="fa fa-circle"></i>{repo.language}</span>}
+                  {repo.forks_count !== '' &&<span><i class="fa fa-code-fork"></i>{repo.forks_count}</span>}
+                  {repo.stargazers_count !== '' &&<span><i class="fa fa-star"></i>{repo.stargazers_count}</span>}
+                  {repo.size !== '' &&<span><i class="fa fa-pie-chart"></i>{repo.size}kb</span>}
                 </div>
               </div>
             })}
