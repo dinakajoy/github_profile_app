@@ -73,10 +73,10 @@ class GithubUserDetails extends React.Component {
                 <p>{repo.description}</p>
                 <br />
                 <div class="repo-group">
-                  {repo.language !== '' &&<span><i class="fa fa-circle"></i>{repo.language}</span>}
-                  {repo.forks_count !== '' &&<span><i class="fa fa-code-fork"></i>{repo.forks_count}</span>}
-                  {repo.stargazers_count !== '' &&<span><i class="fa fa-star"></i>{repo.stargazers_count}</span>}
-                  {repo.size !== '' &&<span><i class="fa fa-pie-chart"></i>{repo.size}kb</span>}
+                  {repo.language !== '' && <span><i class="fa fa-circle"></i>{repo.language}</span>}
+                  {repo.forks_count !== '' && <span><i class="fa fa-code-fork"></i>{repo.forks_count}</span>}
+                  {repo.stargazers_count !== '' && <span><i class="fa fa-star"></i>{repo.stargazers_count}</span>}
+                  {repo.size !== '' && <span><i class="fa fa-pie-chart"></i>{repo.size}kb</span>}
                 </div>
               </div>
             })}
