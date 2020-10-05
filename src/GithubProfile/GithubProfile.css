@@ -48,6 +48,11 @@
   cursor: pointer;
   text-decoration: none;
 }
+.link2 {
+  color: #333;
+  cursor: pointer;
+  text-decoration: underline;
+}
 .wrapper_link {
   color: #333;
 }

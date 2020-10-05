@@ -68,7 +68,7 @@ class GithubUserDetails extends React.Component {
           <div className="repo-details">
             {this.state.repos.map(function(repo, index) {
               return <div className="repo_wrapper">
-                {repo.homepage !== '' && <a href={repo.homepage}><h4><i class="fa fa-code"></i>{'  '}{repo.name}</h4></a>}
+                {repo.homepage !== '' && <a href={repo.homepage} target="_BLANK" rel="noopener noreferrer" className="link2"><h4><i class="fa fa-link"></i>{'  '}{repo.name}</h4></a>}
                 {repo.homepage === '' && <h4><i class="fa fa-code"></i>{'  '}{repo.name}</h4>}
                 <p>{repo.description}</p>
                 <br />
