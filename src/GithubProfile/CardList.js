@@ -5,7 +5,11 @@ import './GithubProfile.css';
 class CardList extends React.Component {
   render() {
     return (
-      this.props.cards.map((card) => <CardItem key={card.id} card={card} />)
+      <section className="container">
+          <div className="cards-wrapper">
+            { this.props.cards.map((card) => <CardItem key={card.id} card={card} /> ) }
+        </div>
+      </section>
     );
   }
 }

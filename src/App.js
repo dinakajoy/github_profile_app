@@ -57,14 +57,12 @@ class App extends React.Component {
         <>
           <Header />
           <main className="content">
-            <div className="container">
-              <Route exact path="/" render= {props=> (
-                <React.Fragment>
-                  <AddCard onSubmit={this.addCard} />
-                  <CardList cards={this.state.cards} />
-                </React.Fragment>
-              )} />
-            </div>
+            <Route exact path="/" render= {props=> (
+              <React.Fragment>
+                <AddCard onSubmit={this.addCard} />
+                <CardList cards={this.state.cards} />
+              </React.Fragment>
+            )} />
             <Route path="/users/:id" component={GithubUserDetails} />
           </main>
           <Footer />

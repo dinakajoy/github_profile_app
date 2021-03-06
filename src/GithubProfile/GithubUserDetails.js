@@ -1,5 +1,6 @@
 import React from 'react';
 import './GithubProfile.css';
+import { Doughnut } from 'react-chartjs-2';
 
 class GithubUserDetails extends React.Component {
   state = {
@@ -18,11 +19,6 @@ class GithubUserDetails extends React.Component {
     }
   }
 
-  getDate = (date) => {
-    const monthNames = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
-    return `Joined ${monthNames[new Date(date).getMonth()]} ${new Date(date).getDay()}, ${new Date(date).getFullYear()}`;
-  }
-
   loadRepos = async() => {
     try {
       const resp = await fetch(`https://api.github.com/users/${this.props.match.params.id}/repos`);
@@ -37,9 +33,16 @@ class GithubUserDetails extends React.Component {
     await this.loadCard();
     await this.loadRepos();
   }
+
+
+  getDate = (date) => {
+    const monthNames = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+    return `Joined ${monthNames[new Date(date).getMonth()]} ${new Date(date).getDay()}, ${new Date(date).getFullYear()}`;
+  }
+
   render() { 
     return (
-      <div className="detail_wrapper">
+      <section className="container">
         <div className="section-a">
           <img src={this.state.card.avatar_url} alt={this.state.card.name} />
           <div className="detail">
@@ -56,6 +59,37 @@ class GithubUserDetails extends React.Component {
               </div>
             </div>
           </div>
+
+          <Doughnut 
+            data={{
+              datasets: [{
+                data: [this.state.card.public_repos, this.state.card.following, this.state.card.followers, this.state.card.public_gists],
+                backgroundColor: [
+                  'rgba(255, 99, 132, 0.2)',
+                  'rgba(54, 162, 235, 0.2)',
+                  'rgba(255, 206, 86, 0.2)',
+                  'rgba(75, 192, 192, 0.2)',
+                ],
+                borderColor: [
+                  'rgba(255, 99, 132, 1)',
+                  'rgba(75, 192, 192, 1)',
+                  'rgba(153, 102, 255, 1)',
+                  'rgba(255, 159, 64, 1)'
+                ],
+                borderWidth: 1
+              }],
+              labels: [
+                'Repositories',
+                'Following',
+                'Followers',
+                'Public Gists'
+              ],
+            }}
+            width = '10px'
+            height = '10px'
+            options = {{ maintainAspectRatio: false }} 
+          />
+
           <div className="boxes">
             <div className="box">{this.state.card.public_repos} <br />Repositories</div>
             <div className="box">{this.state.card.following} <br />Following</div>
@@ -82,7 +116,7 @@ class GithubUserDetails extends React.Component {
             })}
           </div>
         </div>
-      </div>
+      </section>
     );
   }
 }
