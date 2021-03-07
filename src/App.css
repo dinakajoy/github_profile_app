@@ -24,6 +24,14 @@
   text-align: center;
 }
 
+.add-card-wrapper {
+  background-color: rgba(75, 192, 192, 0.171);
+  min-height: 130px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 .content {
   margin: 50px auto;
   text-align: center;

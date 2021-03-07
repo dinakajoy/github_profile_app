@@ -56,11 +56,15 @@ class App extends React.Component {
       <Router>
         <>
           <Header />
-          <main className="content">
+          <main>
             <Route exact path="/" render= {props=> (
               <React.Fragment>
-                <AddCard onSubmit={this.addCard} />
-                <CardList cards={this.state.cards} />
+                <div className="add-card-wrapper">
+                  <AddCard onSubmit={this.addCard} />
+                </div>
+                <div className="content">
+                  <CardList cards={this.state.cards} />
+                </div>
               </React.Fragment>
             )} />
             <Route path="/users/:id" component={GithubUserDetails} />

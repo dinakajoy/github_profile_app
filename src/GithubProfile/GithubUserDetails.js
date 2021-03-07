@@ -85,20 +85,11 @@ class GithubUserDetails extends React.Component {
                 'Public Gists'
               ],
             }}
-            width = '10px'
-            height = '10px'
-            options = {{ maintainAspectRatio: false }} 
           />
-
-          <div className="boxes">
-            <div className="box">{this.state.card.public_repos} <br />Repositories</div>
-            <div className="box">{this.state.card.following} <br />Following</div>
-            <div className="box">{this.state.card.followers} <br />Followers</div>
-          </div>
         </div>
 
         <div className="section-b">
-          <h2> Repositories </h2><br />
+          <h2>{this.state.card.name}'s' Repositories </h2><br />
           <div className="repo-details">
             {this.state.repos.map(function(repo, index) {
               return <div className="repo_wrapper">

@@ -7,7 +7,8 @@
 .username {
   padding: 5px;
   border: 0;
-  border-bottom: 1px solid #333;
+  border-bottom: 1px solid #282c34;
+  background-color: transparent;
   width: 100%;
   margin-bottom: 20px;
 }
@@ -15,8 +16,8 @@
 .username:active, 
 .btn:active, 
 .btn:focus {
-  border: 1px solid #333;
-  outline: 1px solid #333;
+  border: 1px solid #282c34;
+  outline: 1px solid #282c34;
   border-radius: 3px;
 }
 .btn {
@@ -24,7 +25,7 @@
   border: 0;
   border-radius: 3px;
   cursor: pointer;
-  background-color: #333;
+  background-color: #282c34;
   color: #fff;
   width: 100%;
 }
@@ -59,7 +60,7 @@
   border-radius: 50%;
 }
 .card-details {
-  color: #333;
+  color: #282c34;
   text-align: left;
 }
 .card-details h2 {
@@ -85,7 +86,7 @@
 .section-a img {
   border-radius: 50%;
   vertical-align: middle;
-  max-width: 200px;
+  max-width: 100px;
   border: 10px solid #282c34;
   margin-bottom: 20px;
 }
@@ -93,7 +94,7 @@
   text-align: center;
 }
 .detail h1 {
-  color: rgb(179, 6, 6);
+  color: rgba(255, 99, 132, 1);
   text-transform: uppercase;
 }
 .detail p {
@@ -105,7 +106,7 @@
 }
 .section-a .fa {
   font-size:26px;
-  color: rgb(179, 6, 6);
+  color: rgba(255, 99, 132, 1);
   margin: 0 10px;
 }
 .sub-details {
@@ -116,22 +117,8 @@
 .sub-details span {
   font-weight: bold;
 }
-.boxes {
-  display: flex;
-  justify-content: space-between;
-  font-size: 1.3rem;
-  font-weight: bolder;
-  width: 100%;
-  text-align: center;
-}
-.box {
-  padding: 25px;
-  box-shadow: 3px 3px 2px #ccc;
-  background-color: #282c34;
-  color: #fff;
-}
 .section-b {
-  width: 90%;
+  width: 100%;
   margin: 50px auto;
   text-align: left;
 }
@@ -141,11 +128,12 @@
   grid-gap: 30px;
 }
 .repo_wrapper {
-  box-shadow: 2px 2px 2px #333;
+  box-shadow: 2px 2px 2px #282c34;
   border: 10px;
-  background-color: #ccc;
+  background-color: rgba(238, 238, 238, 0.555);
   padding: 10px;
-  width: 100%;
+  width: 80%;
+  margin: 0 auto;
   position: relative;
 }
 .repo_wrapper h4, .repo_wrapper p {
@@ -161,9 +149,15 @@
   position: absolute;
   bottom: 5px;
 }
+.section-b a {
+  color: #282c34;
+}
+.section-b a:hover {
+  color: #000;
+}
 .section-b .fa {
   font-size: 15px;
-  color: rgb(179, 6, 6);
+  color: rgba(255, 99, 132, 1);
   margin-right: 3px;
 }
 
@@ -186,10 +180,17 @@
     padding: 15px;
   }
   .repo-details {
-    grid-template-columns: 1fr;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 40px;
+  }
+  .repo_wrapper {
+    width: 100%;
   }
   .section-b {
     width: 100%;
+  }
+  .section-a img {
+    max-width: 150px;
   }
 }
 
@@ -204,14 +205,18 @@
   .repo-details {
     width: 100%;
     grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 60px;
   }
   .section-a {
     width: 80%;
   }
   .repo-details {
     width: 100%;
-    grid-template-columns: 50% 50%;
-  } 
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+  .section-a img {
+    max-width: 200px;
+  }
 }
 
 @media (min-width: 1250px) {
@@ -228,5 +233,12 @@
   .cards-wrapper {
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
     grid-gap: 30px;
+  }
+  .repo-details {
+    width: 100%;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  } 
+  .section-a img {
+    max-width: 300px;
   }
 }
