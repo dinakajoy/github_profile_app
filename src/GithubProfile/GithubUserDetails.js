@@ -89,7 +89,7 @@ class GithubUserDetails extends React.Component {
         </div>
 
         <div className="section-b">
-          <h2>{this.state.card.name}'s' Repositories </h2><br />
+          <h2>{this.state.card.name}'s Repositories </h2><br />
           <div className="repo-details">
             {this.state.repos.map(function(repo, index) {
               return <div className="repo_wrapper">
