@@ -13,7 +13,8 @@ To view more github user's details, click on the card
 
 ## Built With
 * React - For Layout 
-* CSS - For Styling    
+* CSS - For Styling 
+* Consumes github's API   
 
 ## Link
 Access app via https://github-profile-app-by-joy.netlify.app/
