@@ -34,6 +34,7 @@
 .crd-itm {
   display: flex;
   justify-content: center;
+  width: 100%;
 }
 .cards-wrapper {
   width: 100%;
@@ -49,6 +50,7 @@
   background-color: rgba(204, 204, 204, 0.274);
   box-shadow: 3px 3px 3px rgb(122, 122, 122);
   padding: 5px;
+  width: 100%;
 }
 .card-img,
 .card-details {
