@@ -5,7 +5,8 @@ This is a simple application where users can create cardlist of registered users
 
 ## Installation
 Clone the repository and cd into the project directory  
-Run `npm install`     
+Run `npm install` 
+To run locally, run `npm start` and copy the build folder to your server 
 To deploy, run `npm run build` and copy the build folder to your server      
 
 ## Usage
