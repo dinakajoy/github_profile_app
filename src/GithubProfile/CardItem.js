@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import './GithubProfile.css';
 
 class CardItem extends React.Component {
-  user = () => <i class="fa fa-user-circle-o" style="font-size:48px;color:red"></i>;
+  user = () => <i class="fa fa-user-circle-o" style={{fontSize:"48px",color:"red"}}></i>;
 
   getDate = (date) => {
     const monthNames = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
@@ -12,7 +12,7 @@ class CardItem extends React.Component {
 
   render() {
     return (
-      <Link to={{ pathname:/users/+this.props.card.login, card: "hey" }} target="_BLANK" rel="noopener noreferrer" className="link">
+      <Link to={{ pathname:/users/+this.props.card.login, card: "hey" }} target="_BLANK" rel="noopener noreferrer" className="link crd-itm">
         <div className="card-wrapper">
           <div className="card-img">
             <img src={this.props.card.avatar_url === null ? this.user : this.props.card.avatar_url} alt={this.props.card.name} />

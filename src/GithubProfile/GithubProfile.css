@@ -31,6 +31,10 @@
 }
 
 /* Card Item Styles */
+.crd-itm {
+  display: flex;
+  justify-content: center;
+}
 .cards-wrapper {
   width: 100%;
   display: grid;
@@ -219,7 +223,7 @@
   }
 }
 
-@media (min-width: 1250px) {
+@media (min-width: 1750px) {
   .container{
     width: 90%;
   }
@@ -229,7 +233,7 @@
   }
 }
 
-@media (min-width: 1920px) {
+@media (min-width: 2000px) {
   .cards-wrapper {
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
     grid-gap: 30px;
