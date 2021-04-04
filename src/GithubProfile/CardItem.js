@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import './GithubProfile.css';
 
 class CardItem extends React.Component {
-  user = () => <i class="fa fa-user-circle-o" style={{fontSize:"48px",color:"red"}}></i>;
+  user = () => <i className="fa fa-user-circle-o" style={{fontSize:"48px",color:"red"}}></i>;
 
   getDate = (date) => {
     const monthNames = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
@@ -21,7 +21,7 @@ class CardItem extends React.Component {
             <h2>{this.props.card.name}</h2>
             <p><span><i className="fa fa-map-marker"></i></span> <span>{this.props.card.location === null ? 'Not Applicable': this.props.card.location}</span></p>
             <p><span><i className="fa fa-calendar"></i></span> <span>{this.getDate(this.props.card.created_at)}</span></p>
-             <p><span><i class="fa fa-twitter"></i></span> <span>{this.props.card.twitter_username === null ? 'Not Applicable': this.props.card.twitter_username}</span></p>
+             <p><span><i className="fa fa-twitter"></i></span> <span>{this.props.card.twitter_username === null ? 'Not Applicable': this.props.card.twitter_username}</span></p>
           </div>    
         </div>     
       </Link>

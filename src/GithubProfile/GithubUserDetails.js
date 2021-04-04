@@ -101,22 +101,22 @@ class GithubUserDetails extends React.Component {
             <div className="repo-details">
               {this.state.repos.map(function(repo, index) {
                 return <div className="repo_wrapper">
-                  {repo.homepage !== '' && <a href={repo.homepage} target="_BLANK" rel="noopener noreferrer" className="link2"><h4><i class="fa fa-link"></i>{'  '}{repo.name}</h4></a>}
-                  {repo.homepage === '' && <h4><i class="fa fa-code"></i>{'  '}{repo.name}</h4>}
+                  {repo.homepage !== '' && <a href={repo.homepage} target="_BLANK" rel="noopener noreferrer" className="link2"><h4><i className="fa fa-link"></i>{'  '}{repo.name}</h4></a>}
+                  {repo.homepage === '' && <h4><i className="fa fa-code"></i>{'  '}{repo.name}</h4>}
                   <p>{repo.description}</p>
                   <br />
-                  <div class="repo-group">
-                    {repo.language !== '' && <span><i class="fa fa-circle"></i>{repo.language}</span>}
-                    {repo.forks_count !== '' && <span><i class="fa fa-code-fork"></i>{repo.forks_count}</span>}
-                    {repo.stargazers_count !== '' && <span><i class="fa fa-star"></i>{repo.stargazers_count}</span>}
-                    {repo.size !== '' && <span><i class="fa fa-pie-chart"></i>{repo.size}kb</span>}
+                  <div className="repo-group">
+                    {repo.language !== '' && <span><i className="fa fa-circle"></i>{repo.language}</span>}
+                    {repo.forks_count !== '' && <span><i className="fa fa-code-fork"></i>{repo.forks_count}</span>}
+                    {repo.stargazers_count !== '' && <span><i className="fa fa-star"></i>{repo.stargazers_count}</span>}
+                    {repo.size !== '' && <span><i className="fa fa-pie-chart"></i>{repo.size}kb</span>}
                   </div>
                 </div>
               })}
             </div>
           </div>
         </section> }
-        { this.state.isLoading && <h2 class="loading">Loading ... </h2>}
+        { this.state.isLoading && <h2 className="loading">Loading ... </h2>}
       </>
     );
   }
