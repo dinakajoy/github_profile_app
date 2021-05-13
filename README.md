@@ -1,4 +1,4 @@
-# github_profile_app
+# Github Profile App
 
 ## Description
 This is a simple application where users can create cardlist of registered users on github and view thier github details. It consumes github's API. This is my first react application and since we mostly keep our front-end separate from the logics and only allow communicate between app user interface and logics via API, I decided to build on that skill since that's what most of the tasks entails  
